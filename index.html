@@ -4,16 +4,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Natnael Abrham | Python Fullstack Developer</title>
+  <title>Natnael Abrham | Python Backend & Automation Engineer</title>
   <meta name="description"
-    content="Portfolio of Natnael Abrham, a Python fullstack developer delivering web apps, automation, and cloud solutions.">
+    content="Portfolio of Natnael Abrham, a Python backend engineer and automation specialist building resilient systems and workflows.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
+  <meta property="og:title" content="Natnael Abrham | Python Fullstack Developer">
+  <meta property="og:description"
+    content="Portfolio of Natnael Abrham, a Python fullstack developer delivering web apps, automation, and cloud solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-image.png">
 </head>
 
 <body>
@@ -31,26 +36,37 @@
         <span class="name">Natnael Abrham</span>
         <span class="tagline">Backend &amp; Automation</span>
       </div>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="nav-actions">
-        <a href="https://github.com/natnaelab" aria-label="GitHub" class="social-icon nav-icon" target="_blank"
-          rel="noopener noreferrer">
-          <img src="icons/github.svg" alt="GitHub" width="20" height="20">
-        </a>
-        <a href="https://stackoverflow.com/users/12186403/" aria-label="Stack Overflow" class="social-icon nav-icon"
-          target="_blank" rel="noopener noreferrer">
-          <img src="icons/stackoverflow.svg" alt="Stack Overflow" width="20" height="20">
-        </a>
-        <a href="mailto:natbiz08@gmail.com" aria-label="Email" class="social-icon nav-icon">
-          <img src="icons/email.svg" alt="Email" width="20" height="20">
-        </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <div class="nav-content">
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#skills">Skills</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact" class="nav-contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <a href="https://github.com/natnaelab" aria-label="GitHub" class="social-icon nav-icon" target="_blank"
+            rel="noopener noreferrer">
+            <img src="icons/github.svg" alt="GitHub" width="20" height="20">
+          </a>
+          <a href="https://stackoverflow.com/users/12186403/" aria-label="Stack Overflow" class="social-icon nav-icon"
+            target="_blank" rel="noopener noreferrer">
+            <img src="icons/stackoverflow.svg" alt="Stack Overflow" width="20" height="20">
+          </a>
+          <a href="mailto:natbiz08@gmail.com" aria-label="Email" class="social-icon nav-icon">
+            <img src="icons/email.svg" alt="Email" width="20" height="20">
+          </a>
+        </div>
       </div>
     </nav>
     <header class="hero">
@@ -66,25 +82,14 @@
             I build resilient backends and AI automated workflows that grow with your business. From cloud architecture
             to data pipelines, I handle the technical heavy lifting so you can focus on the product.
           </p>
+          <p class="hero-credibility">
+            Trusted by global clients for automated workflows and resilient backends · AWS Certified
+          </p>
           <div class="ctas">
             <a class="btn primary" href="#contact">Start a project</a>
-            <a class="btn ghost" href="Natnael-Abrham.pdf" download>Download Resume</a>
           </div>
 
-          <div class="social-proof">
-            <span class="label">Ways to collaborate</span>
-            <div class="proof-pills">
-              <span class="pill-link">Direct contract</span>
-              <a class="pill-link" href="https://upwork.com/fl/natnael" target="_blank" rel="noreferrer">
-                <img src="icons/upwork.svg" alt="Upwork" class="brand-icon">
-                Upwork
-              </a>
-              <a class="pill-link" href="https://fiverr.com/natnaelab" target="_blank" rel="noreferrer">
-                <img src="icons/fiverr.svg" alt="Fiverr" class="brand-icon">
-                Fiverr
-              </a>
-            </div>
-          </div>
+
         </div>
 
       </div>
@@ -94,7 +99,7 @@
       <section id="about" class="section hidden">
         <div class="section-head">
           <p class="eyebrow">About</p>
-          <h2>Who I am.</h2>
+          <h2>Who I am</h2>
         </div>
         <div class="about-content">
           <p class="section-text">
@@ -102,9 +107,8 @@
             workflows.
           </p>
           <p class="section-text">
-            Over the last 4 years, I've partnered with clients globally to turn complex requirements into
-            production-ready systems. Whether it's optimizing a legacy ERP or building a new API from scratch, I focus
-            on writing clean, maintainable code that solves real business problems.
+            I specialize in the "engine room" of software: data pipelines, API logic, and cloud infrastructure. I build
+            the systems that keep business applications running smoothly, securely, and without constant maintenance.
           </p>
         </div>
       </section>
@@ -117,35 +121,22 @@
         </div>
         <div class="cards">
           <article class="card">
-            <p class="card-label">Automation & AI</p>
-            <h3>Automation that survives real-world traffic.</h3>
+            <p class="card-label">Backend Systems & APIs</p>
+            <h3>Architectures that scale with you.</h3>
             <p class="card-text">
-              n8n flows, Python scripts, and AI automation to keep teams focused on outcomes. Great for lead intake,
-              reporting, and enrichment.
+              High-performance APIs and data pipelines. I design systems that handle complex logic, secure data flow,
+              and heavy traffic without breaking.
             </p>
             <ul class="list">
-              <li>Web scraping & data extraction</li>
-              <li>LLM-assisted data cleaning and routing</li>
-              <li>Scheduled workflows with sensible observability</li>
-            </ul>
-          </article>
-          <article class="card">
-            <p class="card-label">Fullstack delivery</p>
-            <h3>Web apps that stay fast and maintainable.</h3>
-            <p class="card-text">
-              Django, FastAPI, and Flask services with React or Next.js frontends. Strong on auth, integrations, and
-              clear API design.
-            </p>
-            <ul class="list">
-              <li>Reusable components and typed API clients</li>
-              <li>PostgreSQL, Redis, and background workers</li>
-              <li>Monitoring and sensible error handling</li>
+              <li>REST & GraphQL API design</li>
+              <li>Database modeling & optimization</li>
+              <li>Secure authentication & caching strategies</li>
             </ul>
           </article>
 
           <article class="card">
             <p class="card-label">Cloud infrastructure</p>
-            <h3>Cloud infrastructure that scales.</h3>
+            <h3>Deployments that don't wake you up.</h3>
             <p class="card-text">AWS Certified Solutions Architect with hands-on GCP experience. Lean, secure stacks
               that match your stage.</p>
             <ul class="list">
@@ -154,23 +145,36 @@
               <li>Clear documentation and smooth team handoffs</li>
             </ul>
           </article>
+          <article class="card">
+            <p class="card-label">Automation & AI</p>
+            <h3>Automation that survives real-world traffic.</h3>
+            <p class="card-text">
+              Python scripts, n8n flows, and AI automation to keep teams focused on outcomes. Great for lead intake,
+              reporting, and enrichment.
+            </p>
+            <ul class="list">
+              <li>Web scraping & data extraction</li>
+              <li>LLM-assisted data cleaning and routing</li>
+              <li>Scheduled workflows with sensible observability</li>
+            </ul>
+          </article>
         </div>
       </section>
 
       <section id="projects" class="section muted hidden">
         <div class="section-head">
           <p class="eyebrow">Projects</p>
-          <h2>Real systems in production.</h2>
-          <p class="section-text">Client work and open-source projects you can verify on GitHub.</p>
+          <h2>Real systems in production</h2>
+          <p class="section-text">Client work and open-source projects you can find on GitHub.</p>
         </div>
         <div class="cards projects">
-          <article class="card project-card featured">
+          <article class="card project-card">
+            <img src="images/inventory.png" alt="Hardware Inventory Dashboard" class="card-image" loading="lazy">
             <p class="card-label">Fullstack · Production</p>
             <h3>Hardware Inventory Management System</h3>
             <p class="card-text">
-              Custom inventory management platform for a hardware store client. Integrates with Active Directory for
-              authentication, provides real-time device tracking across multiple locations, and is actively maintained
-              with new features based on evolving client needs.
+              Custom inventory management platform that <strong>replaced error-prone spreadsheets with a real-time
+                system</strong>. Features centralized LDAP authentication and real-time multi-location sync via HTMX.
             </p>
             <div class="project-meta">
               <span class="tag">FastAPI</span>
@@ -182,29 +186,31 @@
               rel="noopener noreferrer">View on GitHub</a>
           </article>
           <article class="card project-card">
-            <p class="card-label">Real-time · Django</p>
-            <h3>Echo - Chat Application</h3>
+            <img src="images/fuzzy.png" alt="FuzzyMatch SaaS Dashboard" class="card-image" loading="lazy">
+            <p class="card-label">SaaS · B2B API</p>
+            <h3>FuzzyMatch SaaS & API</h3>
             <p class="card-text">
-              Real-time messaging app with chat rooms, user profiles, and authentication. Built with Django Channels and
-              HTMX for a modern, lightweight approach to real-time features.
+              Full-stack subscription platform featuring <strong>PayPal payment integration and tiered access
+                control</strong>. Architected a heavy-duty fuzzy matching API capable of processing large datasets for
+              Excel plugin integration.
             </p>
             <div class="project-meta">
-              <span class="tag">Django</span>
-              <span class="tag">HTMX</span>
-              <span class="tag">Channels</span>
-              <span class="tag">TailwindCSS</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">React</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Firebase</span>
             </div>
-            <a class="pill-link" href="https://echo-bm14.onrender.com/" target="_blank" rel="noopener noreferrer">Live
-              Demo</a>
-            <a class="pill-link" href="https://github.com/natnaelab/echo" target="_blank" rel="noopener noreferrer">View
-              on GitHub</a>
+            <a class="pill-link" href="http://fuzzylookupmatch.com/" target="_blank" rel="noopener noreferrer">Live
+              Website</a>
           </article>
           <article class="card project-card">
+            <img src="images/haron.png" alt="Haron Forex Dashboard" class="card-image" loading="lazy">
             <p class="card-label">Enterprise · ERPNext</p>
             <h3>Haron ERP & Forex Management Systems</h3>
             <p class="card-text">
-              Enterprise resource planning platform with financial management, inventory, HR, and CRM modules. Built
-              custom Frappe/ERPNext integrations for forex tracking and business workflows at previous company.
+              Core developer for a custom Forex trading platform managing high-volume currency transactions. Built the
+              <strong>admin dashboards, real-time pricing tools, and sale workflows</strong> that power daily
+              operations.
             </p>
             <div class="project-meta">
               <span class="tag">ERPNext</span>
@@ -216,18 +222,18 @@
               Website</a>
           </article>
           <article class="card project-card">
-            <p class="card-label">Data Engineering · Multiple Clients</p>
-            <h3>Web Scraping & Data Extraction</h3>
+            <p class="card-label">Data Engineering · Python</p>
+            <h3>Multi-Marketplace Data Pipeline</h3>
             <p class="card-text">
-              Built custom scraping solutions for clients across e-commerce, real estate, and market research. Delivered
-              clean, structured data extraction systems with robust error handling, proxy rotation, and anti-bot
-              countermeasures.
+              Distributed data aggregation system monitoring thousands of products across <strong>Amazon and
+                Bol.com</strong>. Orchestrates headless browsers and proxy networks to deliver normalized pricing
+              intelligence.
             </p>
             <div class="project-meta">
+              <span class="tag">Celery</span>
               <span class="tag">Selenium</span>
-              <span class="tag">Playwright</span>
-              <span class="tag">Scrapy</span>
               <span class="tag">Python</span>
+              <span class="tag">Redis</span>
             </div>
           </article>
         </div>
@@ -236,13 +242,14 @@
       <section id="testimonials" class="section hidden">
         <div class="section-head">
           <p class="eyebrow">Testimonials</p>
-          <h2>What clients actually say.</h2>
+          <h2>What clients actually say</h2>
           <p class="section-text">Word-for-word reviews from Upwork and Fiverr clients.</p>
         </div>
         <div class="cards testimonials">
           <article class="card testimonial-card">
             <p class="card-label">Fiverr · Hardware Inventory</p>
             <h3>"Excellent technical skills and strong understanding of our needs."</h3>
+            <span class="client-meta">Hardware Retailer · Custom ERP</span>
             <p class="card-text">I had an excellent experience working with Natnael on developing a custom web
               application for our Hardware Inventory. From start to finish, Natnael demonstrated excellent technical
               skills and a strong understanding of our specific needs.</p>
@@ -256,6 +263,7 @@
           <article class="card testimonial-card">
             <p class="card-label">Upwork · Web Scraping</p>
             <h3>"Efficient and skillful in scraping technique, very considerable."</h3>
+            <span class="client-meta">Real Estate Agency · Data Pipeline</span>
             <p class="card-text">Natnael helped me scrape info from a property search site. Not only was he efficient
               and skillful in the scraping technique, he also was very considerable to make a briefing.</p>
             <div class="testimonial-meta">
@@ -269,6 +277,7 @@
           <article class="card testimonial-card">
             <p class="card-label">Upwork · Website Development</p>
             <h3>"Quick, fast, reliable, and does excellent work."</h3>
+            <span class="client-meta">SaaS Startup · Frontend Revamp</span>
             <p class="card-text">Natnael did fantastic work on our website. I would definitely recommend him for any
               project. We have hired many freelancers and he is quick, fast, reliable, and does excellent work.</p>
             <div class="testimonial-meta">
@@ -284,24 +293,37 @@
       <section id="skills" class="section muted hidden">
         <div class="section-head">
           <p class="eyebrow">Toolbox</p>
-          <h2>Technologies I reach for first.</h2>
+          <h2>Technologies I reach for first</h2>
           <p class="section-text">A practical stack tuned for stability, fast delivery, and measured scale.</p>
         </div>
-        <div class="pill-grid">
-          <span class="pill">Python</span>
-          <span class="pill">Django</span>
-          <span class="pill">FastAPI</span>
-          <span class="pill">Flask</span>
-          <span class="pill">React</span>
-          <span class="pill">Next.js</span>
-          <span class="pill">PostgreSQL</span>
-          <span class="pill">Redis</span>
-          <span class="pill">Celery</span>
-          <span class="pill">Docker</span>
-          <span class="pill">AWS (ECS, Lambda, RDS)</span>
-          <span class="pill">n8n</span>
-          <span class="pill">Playwright / Scrapy</span>
-          <span class="pill">LLM / AI automation</span>
+        <div class="skill-categories">
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <div class="pill-grid small">
+              <span class="pill">Python</span>
+              <span class="pill">Django</span>
+              <span class="pill">FastAPI</span>
+              <span class="pill">Flask</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Data & Infra</h3>
+            <div class="pill-grid small">
+              <span class="pill">PostgreSQL</span>
+              <span class="pill">Redis</span>
+              <span class="pill">Docker</span>
+              <span class="pill">AWS (ECS, Lambda)</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Automation & AI</h3>
+            <div class="pill-grid small">
+              <span class="pill">n8n</span>
+              <span class="pill">Playwright</span>
+              <span class="pill">Celery</span>
+              <span class="pill">LLM Agents</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -315,18 +337,47 @@
           <article class="card">
             <p class="card-label">AWS</p>
             <h3>AWS Certified Solutions Architect</h3>
+            <span class="cert-meta">Issued June 2024 · <a
+                href="https://www.credly.com/badges/9219b313-4686-4feb-857d-f7766af51793/public_url" target="_blank"
+                rel="noopener noreferrer" class="verify-link">Verify</a></span>
             <p class="card-text">Designing cost-aware, secure, and scalable stacks that match product stage.</p>
           </article>
           <article class="card">
             <p class="card-label">AWS</p>
             <h3>AWS Certified Cloud Practitioner</h3>
+            <span class="cert-meta">Issued Jan 2023 · <a
+                href="https://www.credly.com/badges/ce8b0f62-d246-4ff3-b59e-f0eda8460922/public_url" target="_blank"
+                rel="noopener noreferrer" class="verify-link">Verify</a></span>
             <p class="card-text">Grounded in AWS fundamentals, governance, and best practices.</p>
           </article>
           <article class="card">
+            <p class="card-label">IBM</p>
+            <h3>Python for Data Science</h3>
+            <span class="cert-meta">Issued Dec 28, 2024 · <a
+                href="https://www.credly.com/badges/6db0f966-d1cb-41ee-917d-9c51d19ebb36/public_url" target="_blank"
+                rel="noopener noreferrer" class="verify-link">Verify</a></span>
+            <p class="card-text">Data analysis, visualization, and manipulation using Python libraries like Pandas and
+              NumPy.</p>
+          </article>
+          <article class="card">
             <p class="card-label">Google Cloud</p>
-            <h3>GCP Skill Badges</h3>
-            <p class="card-text">Hands-on experience with Compute Engine, Load Balancing, and Vertex AI for machine
-              learning workloads.</p>
+            <h3>Google Cloud Skills</h3>
+            <p class="card-text">Verified skills in cloud infrastructure and AI implementation.</p>
+            <ul class="list" style="margin-top: 12px; font-size: 13px;">
+              <li><a href="https://www.credly.com/badges/eec80c0d-583a-4a7d-8925-be201b63f7ea/public_url"
+                  target="_blank" rel="noopener noreferrer" class="hover-link">Prompt Design in Vertex AI</a> <span
+                  style="color: var(--muted); font-size: 11px;">(Nov 2025)</span></li>
+              <li><a href="https://www.credly.com/badges/46b7f7f0-4f4a-4964-9f20-64b53a63b599/public_url"
+                  target="_blank" rel="noopener noreferrer" class="hover-link">Prepare Data for ML APIs</a> <span
+                  style="color: var(--muted); font-size: 11px;">(Nov 2025)</span></li>
+              <li><a href="https://www.credly.com/badges/1baec7f6-e9dc-4a09-9f28-cbc870eb7777/public_url"
+                  target="_blank" rel="noopener noreferrer" class="hover-link">Load Balancing on Compute Engine</a>
+                <span style="color: var(--muted); font-size: 11px;">(Oct 2025)</span>
+              </li>
+              <li><a href="https://www.credly.com/badges/b0a1a699-b5d4-4a28-a8d3-09a3fd5a15c1/public_url"
+                  target="_blank" rel="noopener noreferrer" class="hover-link">App Dev Environment Setup</a> <span
+                  style="color: var(--muted); font-size: 11px;">(Nov 2025)</span></li>
+            </ul>
           </article>
         </div>
       </section>
@@ -334,14 +385,14 @@
       <section id="experience" class="section hidden">
         <div class="section-head">
           <p class="eyebrow">Experience</p>
-          <h2>Roles shaped around shipping and support.</h2>
+          <h2>Roles shaped around shipping and support</h2>
           <p class="section-text">Hands-on delivery across onsite, remote, and freelance projects.</p>
         </div>
         <div class="timeline">
           <div class="timeline-card">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <p class="card-label">Freelance · Upwork & Fiverr | 04/2022 - Present</p>
+              <p class="card-label">Independent Consultant | 04/2022 - Present</p>
               <h3>Python backend and automation</h3>
               <p class="card-text">
                 Leading projects with quick iterations and clear comms. Most engagements focus on API-first backends,
@@ -407,18 +458,19 @@
             <p class="eyebrow">Let’s build</p>
             <h2>Have a project in mind?</h2>
             <p class="section-text">
-              Got an idea? Let's chat. Whether it's a new automation or a complex backend, I'll give you a clear plan
-              and a straight answer.
+              I’m currently open for new contracts. Whether it's a new web app or a complex
+              backend, let's discuss.
             </p>
           </div>
           <div class="contact-actions">
-            <a class="btn primary" href="mailto:natbiz08@gmail.com">Email Natnael</a>
+            <a class="btn primary" href="mailto:natbiz08@gmail.com">Email me</a>
             <div class="links">
               <a href="https://upwork.com/fl/natnael" target="_blank" rel="noreferrer">Upwork</a>
               <span>•</span>
               <a href="https://fiverr.com/natnaelab" target="_blank" rel="noreferrer">Fiverr</a>
             </div>
-            <p class="micro-note">Email or direct contract preferred. Platforms are an option if you or your team needs them.
+            <p class="micro-note">Email or direct contract preferred. Platforms are an option if you or your team needs
+              them.
             </p>
           </div>
         </div>
@@ -427,7 +479,7 @@
 
     <footer class="footer">
       <div class="footer-content">
-        <p>Built with care by Natnael Abrham · Python fullstack developer, automation & cloud enthusiast.</p>
+        <p>Built with care by Natnael Abrham · Backend engineer & automation specialist.</p>
         <div class="social-links">
           <!-- Socials moved to navbar -->
         </div>
@@ -435,7 +487,7 @@
       </div>
     </footer>
   </div>
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 
 </html>
