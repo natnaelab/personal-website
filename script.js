@@ -40,4 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const loadAnalytics = () => {
+    if (document.querySelector('script[data-website-id="ab0efb14-d7ce-4317-933c-cf2fbb7ddbde"]')) {
+      return;
+    }
+    const script = document.createElement('script');
+    script.src = 'https://cloud.umami.is/script.js';
+    script.defer = true;
+    script.dataset.websiteId = 'ab0efb14-d7ce-4317-933c-cf2fbb7ddbde';
+    document.head.appendChild(script);
+  };
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadAnalytics, { timeout: 2000 });
+  } else {
+    window.addEventListener('load', () => {
+      setTimeout(loadAnalytics, 1000);
+    }, { once: true });
+  }
 });

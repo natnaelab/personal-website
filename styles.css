@@ -353,7 +353,7 @@ a {
   border-radius: 999px;
   background: rgba(31, 38, 48, 0.05);
   border: 1px solid var(--border);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 13px;
   color: var(--ink);
   font-family: var(--font-mono);
@@ -434,7 +434,7 @@ a {
 
 .availability-pill p {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   color: #047857;
   margin: 0;
   line-height: 1;
@@ -527,14 +527,200 @@ a {
   margin-top: auto;
 }
 
-.testimonials .card {
+.testimonial-canvas {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.testimonial-signal {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(193, 79, 29, 0.18);
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.92), rgba(252, 250, 245, 0.9));
+}
+
+.testimonial-signal::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(193, 79, 29, 0.12);
+  top: -80px;
+  right: -60px;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.testimonial-signal> * {
+  position: relative;
+  z-index: 1;
+}
+
+.signal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.signal-top .card-label {
+  margin-bottom: 0;
+}
+
+.signal-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(193, 79, 29, 0.3);
+  background: rgba(193, 79, 29, 0.08);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.signal-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.signal-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.signal-stat .stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.signal-stat .stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.signal-themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 6px;
+}
+
+.theme-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(193, 79, 29, 0.2);
+  background: rgba(193, 79, 29, 0.08);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.testimonial-wall {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "feature feature"
+    "left right";
+  gap: 16px;
+}
+
+.quote-card {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.testimonial-card .pill-link {
-  align-self: flex-start;
+.quote-feature {
+  grid-area: feature;
+  border-color: rgba(31, 38, 48, 0.2);
+  box-shadow: 0 18px 40px rgba(31, 38, 48, 0.12);
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.95), rgba(252, 250, 245, 0.9));
+}
+
+.quote-feature h3 {
+  font-size: clamp(22px, 2.4vw, 28px);
+}
+
+.quote-left {
+  grid-area: left;
+}
+
+.quote-right {
+  grid-area: right;
+}
+
+.quote-card h3 {
+  position: relative;
+  padding-left: 22px;
+}
+
+.quote-card h3::before {
+  content: "\"";
+  position: absolute;
+  left: 0;
+  top: -6px;
+  font-size: 32px;
+  color: rgba(193, 79, 29, 0.25);
+  font-family: var(--font-display);
+}
+
+.testimonial-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.micro-quote {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 24px rgba(31, 38, 48, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.micro-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.micro-text {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.chip-divider {
+  color: var(--border);
 }
 
 .project-meta {
@@ -567,7 +753,7 @@ a {
   border-radius: 6px;
   background: rgba(31, 38, 48, 0.03);
   border: 1px solid var(--border);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 11px;
   font-family: var(--font-mono);
   color: var(--muted);
@@ -726,7 +912,7 @@ a {
   border-radius: 12px;
   background: rgba(31, 38, 48, 0.05);
   border: 1px solid var(--border);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--ink);
   text-align: center;
   font-family: var(--font-mono);
@@ -768,30 +954,164 @@ a {
   border: 1px solid rgba(28, 154, 146, 0.2);
 }
 
-.contact-card {
+
+/* Contact Form Styles */
+.contact-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 16px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 32px;
 }
 
-.contact-actions {
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 48px;
+    align-items: start;
+  }
+}
+
+.contact-intro {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
+  gap: 16px;
 }
 
-.links {
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.method-link {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--muted);
-  font-weight: 700;
+  font-weight: 600;
+  color: var(--ink);
+  transition: color 120ms ease;
 }
 
-.links a:hover {
+.method-link:hover {
+  color: var(--accent);
+}
+
+.social-links-row {
+  display: flex;
+  gap: 10px;
+}
+
+.pill-link.small {
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-body);
+  font-size: 15px;
   color: var(--ink);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 3px rgba(28, 154, 146, 0.15);
+}
+
+.form-input.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  align-self: flex-start;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .btn-submit {
+    width: auto;
+  }
+}
+
+/* Testimonial Stars */
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: #fbbf24;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Ensure testimonial card label adjusts */
+.quote-card .card-label {
+  margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+  .testimonial-canvas {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-wall {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "feature"
+      "left"
+      "right";
+  }
+
+  .signal-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonial-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .signal-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-strip {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer {
@@ -1003,4 +1323,21 @@ a {
 .top-nav {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
+}
+
+@media (max-width: 680px) {
+  .grain,
+  .background-orbs {
+    display: none;
+  }
+
+  .hero-card,
+  .section,
+  .card,
+  .timeline-content,
+  .top-nav {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.92);
+  }
 }
