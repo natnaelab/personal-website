@@ -79,3 +79,27 @@ if ('IntersectionObserver' in window) {
 } else {
   revealElements.forEach(el => el.classList.add('visible'));
 }
+
+function loadAnalytics() {
+  if (
+    document.querySelector('script[data-website-id="ab0efb14-d7ce-4317-933c-cf2fbb7ddbde"]') ||
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1'
+  ) {
+    return;
+  }
+
+  const analyticsScript = document.createElement('script');
+  analyticsScript.src = 'https://cloud.umami.is/script.js';
+  analyticsScript.defer = true;
+  analyticsScript.dataset.websiteId = 'ab0efb14-d7ce-4317-933c-cf2fbb7ddbde';
+  document.head.appendChild(analyticsScript);
+}
+
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(loadAnalytics, { timeout: 2000 });
+} else {
+  window.addEventListener('load', () => {
+    window.setTimeout(loadAnalytics, 1000);
+  }, { once: true });
+}
